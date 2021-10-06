@@ -7,8 +7,10 @@
 int _abs(int av)
 {
 if (av >= 0)
-{
-av = (av * (-1));
-}
 return (av);
+else
+{
+av *= -1;
+return (av);
+}
 }
