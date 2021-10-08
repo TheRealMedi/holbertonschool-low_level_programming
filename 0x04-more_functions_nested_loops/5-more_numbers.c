@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * more_numbers - print 10 times the numbers from 10 to 14 making a rectangle shape.
+ * more_numbers - print 10 times the numbers from 10 to 14
  * Return: void
  */
 void more_numbers(void)
