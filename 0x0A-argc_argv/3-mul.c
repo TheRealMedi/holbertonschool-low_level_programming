@@ -14,6 +14,6 @@ if (argc != 3)
 return (1);
 }
 product = atoi(argv[1]) * atoi(argv[2]);
-printf("%d \n", product);
+printf("%d\n", product);
 return (0);
 }
