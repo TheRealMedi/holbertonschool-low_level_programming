@@ -8,6 +8,7 @@
 
 int sum_them_all(const unsigned int n, ...)
 {
+
 unsigned int c;
 int sum = 0;
 
@@ -19,6 +20,7 @@ int sum = 0;
 	}
 
 	va_start(params, n);
+
 	for (c = 0; c < n; c++)
 	{
 		sum += va_arg(params, int);
