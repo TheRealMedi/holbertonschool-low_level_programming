@@ -1,8 +1,9 @@
 #include "variadic_functions.h"
+#include <stdarg.h>
 /**
  * sum_them_all - sum of all parameters
  * @n: Number of params of U-int type
- * Return: sum result from int type
+ * Return: 0 or sum result of the args
  */
 
 int sum_them_all(const unsigned int n, ...)
