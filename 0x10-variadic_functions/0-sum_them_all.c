@@ -8,8 +8,9 @@
 
 int sum_them_all(const unsigned int n, ...)
 {
-	unsigned int c;
-	int sum = 0;
+unsigned int c;
+int sum = 0;
+
 	va_list params;
 
 	if (n == 0)
@@ -20,8 +21,9 @@ int sum_them_all(const unsigned int n, ...)
 	va_start(params, n);
 	for (c = 0; c < n; c++)
 	{
-		sum = sum + va_arg(params, int);
+		sum += va_arg(params, int);
 	}
 	va_end(params);
-	return (sum);
+
+return (sum);
 }
