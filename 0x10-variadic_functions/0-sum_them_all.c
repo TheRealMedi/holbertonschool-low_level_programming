@@ -5,7 +5,6 @@
  * @n: Number of params of U-int type
  * Return: 0 or sum result of the args
  */
-
 int sum_them_all(const unsigned int n, ...)
 {
 
