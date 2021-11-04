@@ -6,7 +6,7 @@
 #include <stdarg.h>
 
 /**
- * main.h by Andrés Medina
+ * variadic_functions.h by Andrés Medina
  */
 
 int sum_them_all(const unsigned int n, ...);
