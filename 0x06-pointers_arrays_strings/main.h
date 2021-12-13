@@ -1,6 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#include <stdio.h>
+
 /**
  * main.h by Andrés Medina
  */
@@ -15,5 +17,10 @@ char *string_toupper(char *);
 char *cap_string(char *);
 char *leet(char *);
 char *rot13(char *s);
+void print_number(int n);
+char *infinite_add(char *n1, char *n2, char *r, int size_r);
+void print_buffer(char *b, int size);
+void carry_from_prev(char *b, int i);
+char *find_str_end(char *s);
 
 #endif
