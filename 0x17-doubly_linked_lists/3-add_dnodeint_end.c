@@ -5,23 +5,31 @@
  * @n: number a save in new node.
  * Return: Pointer a new node.
  */
-dlistint_t *add_dnodeint(dlistint_t **head, const int n)
+dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
-	dlistint_t *newNode;
+	dlistint_t *newNode, *last;
 
-	if (!head)
-		return (NULL);
 
 	newNode = malloc(sizeof(dlistint_t));
 	if (!newNode)
 		return (NULL);
-	newNode->n = n;
-	newNode->next = *head;
-	newNode->prev = NULL;
+    
+    newNode->n = n;
+	newNode->next = NULL;
 
-	if (*head)
-		(*head)->prev = newNode;
+	if (*head == NULL)
+	{
+		newNode->prev = NULL;
+		*head = newNode;
+		return (newNode);
+	}
 
-	*head = newNode;
+	last = *head;
+	while (last->next != NULL)
+		last = last->next;
+	last->next = newNode;
+	newNode->prev = last;
+
 	return (newNode);
+
 }
