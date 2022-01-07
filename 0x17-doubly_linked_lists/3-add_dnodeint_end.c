@@ -1,9 +1,9 @@
 #include "lists.h"
 /**
- * add_dnodeint - Create new node of struct dlistint_t.
- * @head: double pointer
- * @n: number a save in new node.
- * Return: Pointer a new node.
+ * add_dnodeint_end - Adds a new node at the end of a dlistint_t list.
+ * @head: A pointer to the head of the dlistint_t list.
+ * @n: The integer for the new node to contain.
+ * Return: the address of the new element
  */
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
@@ -13,8 +13,8 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 	newNode = malloc(sizeof(dlistint_t));
 	if (!newNode)
 		return (NULL);
-    
-    newNode->n = n;
+
+	newNode->n = n;
 	newNode->next = NULL;
 
 	if (*head == NULL)
