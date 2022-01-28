@@ -4,24 +4,27 @@
  * @size: Array size.
  *
  * Return: If error NULL.
- *         Otherwise: a pointer to the new hash table.
+ *         Otherwise a pointer to the new hash table.
  */
 hash_table_t *hash_table_create(unsigned long int size)
 {
-	hash_table_t *hash = NULL;
+	hash_table_t *ht = NULL;
+	unsigned long int c;
 
-	hash = malloc(sizeof(size));
-	if (!hash)
+	ht = malloc(sizeof(size));
+	if (!ht)
 		return (NULL);
 
-	hash->size = size;
-	hash->array = calloc(size, sizeof(hash_node_t *));
+	ht->size = size;
+	ht->array = calloc(size, sizeof(hash_node_t *));
 
-	if (!hash->array)
+	if (!ht->array)
 	{
-		free(hash);
+		free(ht);
 		return (NULL);
 	}
+	for (c = 0; c < size; c++)
+		ht->array[c] = NULL;
 
-	return (hash);
+	return (ht);
 }
